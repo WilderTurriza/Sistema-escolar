@@ -19,16 +19,16 @@ import org.springframework.core.env.Environment;
 @EnableFeignClients
 public class EscolarApplication implements CommandLineRunner {
 
-	 @Autowired
-	    private Environment env;
+    @Autowired
+    private Environment env;
 
-	    public static void main(String[] args) {
-	        SpringApplication.run(EscolarApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(EscolarApplication.class, args);
 
-	    }
+    }
 
-	    @Override
-	    public void run(String... args) throws Exception {
-	        log.info(env.getProperty("URL_COA"));
-	    }
+    @Override
+    public void run(String... args) throws Exception {
+        log.info(env.getProperty("URL_COA"));
+    }
 }
