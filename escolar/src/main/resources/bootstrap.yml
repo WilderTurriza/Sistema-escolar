@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      uri: jdbc:mysql://localhost:3306/control_escolar
+  application:
+    name: coe
