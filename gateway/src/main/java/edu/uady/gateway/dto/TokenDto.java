@@ -1,13 +1,15 @@
-package edu.uady.authservice.dto;
+package edu.uady.gateway.dto;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class RequestDto {
+@Data
+@Builder
+public class TokenDto {
 
-	private String uri;
-	private String method;
+    private String token;
 }

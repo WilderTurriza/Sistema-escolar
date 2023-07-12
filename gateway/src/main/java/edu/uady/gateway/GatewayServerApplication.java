@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class GatewayApplication {
+public class GatewayServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GatewayApplication.class, args);
+		SpringApplication.run(GatewayServerApplication.class, args);
 	}
 
 
@@ -23,18 +23,18 @@ public class GatewayApplication {
 		return "microservicio de uady no disponible por el momento";
 	}
 
-	@Bean
-	@LoadBalanced
-	public RouteLocator router(RouteLocatorBuilder builder) {
-		return builder.routes()
-//				.route(p -> p.path("/test1")
-//						.filters(f -> f.addRequestHeader("Hola", "UADY"))
-//						.uri("https://apidemoportal.uady.mx/api/menu/secondary/1"))
-//	    		.route(p-> p.host("*.test2")
-//						.filters(f-> f.circuitBreaker(config -> config.setName("test")
-//								.setFallbackUri("fordward:/test")))
-//						.uri("http://localhost:80")				)
-				.build();
-	}
+//	@Bean
+//	@LoadBalanced
+//	public RouteLocator router(RouteLocatorBuilder builder) {
+//		return builder.routes()
+////				.route(p -> p.path("/test1")
+////						.filters(f -> f.addRequestHeader("Hola", "UADY"))
+////						.uri("https://apidemoportal.uady.mx/api/menu/secondary/1"))
+////				.route(p-> p.host("*.test2")
+////						.filters(f-> f.circuitBreaker(config -> config.setName("test")
+////								.setFallbackUri("fordward:/test")))
+////						.uri("http://localhost:80")				)
+//				.build();
+//	}
 
 }
