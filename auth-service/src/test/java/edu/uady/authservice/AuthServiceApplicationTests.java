@@ -1,10 +1,10 @@
-package edu.uady.uadyproducer;
+package edu.uady.authservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UadyProducerApplicationTests {
+class AuthServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

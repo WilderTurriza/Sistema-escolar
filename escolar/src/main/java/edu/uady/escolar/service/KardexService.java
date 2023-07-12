@@ -22,13 +22,13 @@ import java.util.List;
 @Service
 @Log4j2
 public class KardexService {
-    @Autowired
+	@Autowired
     private Environment env;
     @Autowired
     private KardexRepository kardexRepository;
-    @Autowired
+
+    @Autowired(required=true)
     private IPlanEstudiosClient planEstudiosClient;
-    
 
     public Kardex createKardex(Kardex kardex){
         log.info("crea Kardex: "+kardex.toString());
